@@ -1,0 +1,139 @@
+[gd_scene load_steps=15 format=3 uid="uid://37lq3l27k57p"]
+
+[ext_resource type="Script" uid="uid://bwl4tmacn36be" path="res://main.gd" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://byhwt1a60ceas" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://b3f416747mixr" path="res://fonts/paaymaay_regular.ttf" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://biijnd5f33d4f" path="res://score.gd" id="4_lquwl"]
+[ext_resource type="Script" uid="uid://bxtxhdw5khmdj" path="res://label.gd" id="5_lquwl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7dm0k"]
+size = Vector3(120, 2, 120)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0xm2m"]
+albedo_color = Color(0.722386, 0.981846, 0.673909, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ig7tw"]
+material = SubResource("StandardMaterial3D_0xm2m")
+size = Vector3(120, 2, 120)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+albedo_color = Color(0.0156756, 0.295231, 0.331279, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_1bvp3"]
+material = SubResource("StandardMaterial3D_h2yge")
+
+[sub_resource type="Curve3D" id="Curve3D_lquwl"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -28.2293, 0, -17.8246, 0, 0, 0, 0, 0, 0, 29.0554, 0, -17.4954, 0, 0, 0, 0, 0, 0, 28.7262, 0, 19.3775, 0, 0, 0, 0, 0, 0, -28.2293, 0, 19.7068),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="Theme" id="Theme_7mycd"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_272bh"]
+font = ExtResource("3_1bvp3")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_7mycd"]
+font = ExtResource("3_1bvp3")
+font_size = 33
+font_color = Color(0.456072, 0.495794, 0.342663, 1)
+
+[node name="main" type="Node"]
+script = ExtResource("1_0xm2m")
+
+[node name="Ground" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground"]
+shape = SubResource("BoxShape3D_7dm0k")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground"]
+mesh = SubResource("BoxMesh_ig7tw")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 16.9734, 0)
+shadow_enabled = true
+
+[node name="cameraPivot" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.2308, 0)
+
+[node name="Camera3D" type="Camera3D" parent="cameraPivot"]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0.25, -7, 15)
+
+[node name="cylinders" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.039, 0.8389, -31.1484)
+mesh = SubResource("CylinderMesh_1bvp3")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.0762, 0.8389, -26.0876)
+mesh = SubResource("CylinderMesh_1bvp3")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.4428, 0.8389, 19)
+mesh = SubResource("CylinderMesh_1bvp3")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="cylinders"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.55, 0.839, 19)
+mesh = SubResource("CylinderMesh_1bvp3")
+
+[node name="SpawnPath" type="Path3D" parent="."]
+curve = SubResource("Curve3D_lquwl")
+
+[node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
+transform = Transform3D(-0.00574673, 0, -0.999983, 0, 1, 0, 0.999983, 0, -0.00574673, -28.2293, 0, -17.8246)
+
+[node name="mob_timer" type="Timer" parent="."]
+wait_time = 1.2
+autostart = true
+
+[node name="player" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="interfact" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_7mycd")
+
+[node name="score" type="Label" parent="interfact"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 344.0
+offset_top = 3.0
+offset_right = 429.0
+offset_bottom = 27.0
+text = "Score: 0"
+label_settings = SubResource("LabelSettings_272bh")
+script = ExtResource("4_lquwl")
+
+[node name="retry" type="ColorRect" parent="interfact"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="interfact"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 326.0
+offset_bottom = 27.0
+text = "นายจักรพรรดิ์ มั่งกูล 663380518-4"
+label_settings = SubResource("LabelSettings_7mycd")
+script = ExtResource("5_lquwl")
+
+[connection signal="timeout" from="mob_timer" to="." method="_on_mob_timer_timeout"]
+[connection signal="hit" from="player" to="." method="_on_player_hit"]

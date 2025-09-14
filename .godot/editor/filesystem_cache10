@@ -1,0 +1,38 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1757869190
+default_bus_layout.tres::AudioBusLayout::-1::1757867299::0::1::::<><><>0<>0<><>::
+default_env.tres::Environment::-1::1757867297::0::1::::<><><>0<>0<><>::
+export_presets.cfg::TextFile::-1::1757867297::0::1::::<><><>0<>0<><>::
+icon.png::CompressedTexture2D/CompressedTexture2D::6843797289346808378::1757867297::1757867297::1::::<><><>0<>0<>49e0e18e2679674ca47ca5fd00237cd6<>res://.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex::
+label.gd::GDScript::4041396449018407351::1757867297::0::1::::<>Label<><>0<>0<><>::
+main.gd::GDScript::3955078752288472850::1757867297::0::1::::<>Node<><>0<>0<><>::
+main.tscn::PackedScene::2032045658534329655::1757869190::0::1::::<><><>0<>0<><>::uid://bwl4tmacn36be::::res://main.gd<>uid://byhwt1a60ceas::::res://player.tscn<>uid://b3f416747mixr::::res://fonts/paaymaay_regular.ttf<>uid://biijnd5f33d4f::::res://score.gd<>uid://bxtxhdw5khmdj::::res://label.gd
+mob.gd::GDScript::8514498418207997820::1757867297::0::1::::<>CharacterBody3D<><>0<>0<><>::
+mob.tscn::PackedScene::2025827907301549956::1757869190::0::1::::<><><>0<>0<><>::uid://dtkqsr8je4yem::::res://mob.gd<>uid://bxwudolllwg7a::::res://art/Pizza Slice.glb
+music_player.tscn::PackedScene::8468745508867793997::1757867297::0::1::::<><><>0<>0<><>::uid://bgxivuwpleqt::::res://art/House In a Forest Loop.ogg
+player.gd::GDScript::1095337383574719468::1757867297::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene::4086774646258445474::1757869190::0::1::::<><><>0<>0<><>::uid://puubt7ty2de7::::res://player.gd<>uid://1jj5yh5tvi36::::res://art/Sandwich Character.glb
+score.gd::GDScript::2965016327265382571::1757867297::0::1::::<>Label<><>0<>0<><>::
+::res://art/::1757869253
+body.material::StandardMaterial3D::-1::1757867298::0::1::::<><><>0<>0<><>::
+Cube.glb::PackedScene/PackedScene::2617322130067077987::1757867298::1757867298::1::::<><><>0<>0<>0a1b962a40c426ae33c6b020eebad1f9<>res://.godot/imported/Cube.glb-59036ad9a123fb795cf318608806b74e.scn::
+eye.material::StandardMaterial3D::-1::1757867298::0::1::::<><><>0<>0<><>::
+House In a Forest Loop.ogg::AudioStreamOggVorbis/AudioStreamOggVorbis::83987022253762123::1757867298::1757867298::1::::<><><>0<>0<>0780343b5f0aebcf84c86cfd3cc18c12<>res://.godot/imported/House In a Forest Loop.ogg-1a6a72ae843ad792b7039931227e8d50.oggvorbisstr::
+HUH.glb::PackedScene/PackedScene::6551786913487358493::1757867298::1757867298::1::::<><><>0<>0<>04336286c2d2de83382935032378489b<>res://.godot/imported/HUH.glb-9cfe125eac42a5153daddcc7c30c9bdf.scn::
+mob.glb::PackedScene/PackedScene::9079335077161543003::1757867298::1757867298::1::::<><><>0<>0<>e1f340e887310fe5ac4fb7e0abccb2c2<>res://.godot/imported/mob.glb-3afb43c03b9d1598b6af5154e2543eac.scn::
+mob_body.material::StandardMaterial3D::-1::1757867298::0::1::::<><><>0<>0<><>::
+mob_eye.material::StandardMaterial3D::-1::1757867298::0::1::::<><><>0<>0<><>::
+Pizza Slice.glb::PackedScene::4047400848029317592::1757865279::1757867383::1::::<><><>0<>0<>484a1a7b022c380bdb21056209304edf<>res://.godot/imported/Pizza Slice.glb-e60c1c0968b04eb038a7293eec5216b1.scn::
+player.glb::PackedScene/PackedScene::4181249727822973547::1757867298::1757867298::1::::<><><>0<>0<>0085c1e879dbc445e89c88cb2d2e1110<>res://.godot/imported/player.glb-08dcfb373480a049995065542e37637b.scn::
+pupil.material::StandardMaterial3D::-1::1757867298::0::1::::<><><>0<>0<><>::
+Retro Jump Simple B 05.wav::AudioStreamWAV::7016841039732659144::1757869253::1757869254::1::::<><><>0<>0<>57df532f4c3342bb8913e6399298a8f0<>res://.godot/imported/Retro Jump Simple B 05.wav-b46b6a6ba396e9f1e464853dfcd63bc2.sample::
+Sandwich Character_100Avatars_185_TastySandwich.png::CompressedTexture2D::3897384539779335389::1757867383::1757867384::1::::<><><>0<>0<>09d8a6b7faa741f7a22aed908743339d<>res://.godot/imported/Sandwich Character_100Avatars_185_TastySandwich.png-328ed3c22bf35e06fa3460b01f8c0b3e.s3tc.ctex::
+Sandwich Character.glb::PackedScene::1844090633890748111::1757865275::1757867384::1::::<><><>0<>0<>7131641ada346bf4bfd78391f594d855<>res://.godot/imported/Sandwich Character.glb-61b354d1e978a4784d4289a517911595.scn::uid://bvr6mbf4axnl2::::res://art/Sandwich Character_100Avatars_185_TastySandwich.png
+::res://docs/::1757867299
+index.apple-touch-icon.png::CompressedTexture2D/CompressedTexture2D::1397627838639575115::1757867298::1757867298::1::::<><><>0<>0<>7f18f3b7c2f1445ffdfcd7899af9650d<>res://.godot/imported/index.apple-touch-icon.png-b21a756d869f84af832970a74d8371bc.ctex::
+index.icon.png::CompressedTexture2D/CompressedTexture2D::2867097334118861246::1757867298::1757867298::1::::<><><>0<>0<>86c463444d4d037e8f11400b850d5ffb<>res://.godot/imported/index.icon.png-b92c9a802ad4b78e247784454a6b506f.ctex::
+index.png::CompressedTexture2D/CompressedTexture2D::5424750245201478055::1757867298::1757867298::1::::<><><>0<>0<>d62491712d2ccc1d7a37119bc4b21658<>res://.godot/imported/index.png-0c78d14d192abe5f22f8c25928ca1ab8.ctex::
+::res://fonts/::1757867299
+LICENSE.txt::TextFile::-1::1757867299::0::1::::<><><>0<>0<><>::
+Montserrat-Medium.ttf::FontFile/FontFile::7081944313043778149::1757867299::1757867299::1::::<><><>0<>0<>696017215c29297f94fe14f009e18995<>res://.godot/imported/Montserrat-Medium.ttf-e832861e4ad4110e172112dc430c04b0.fontdata::
+paaymaay_regular.ttf::FontFile/FontFile::4363839096778528959::1757867299::1757867299::1::::<><><>0<>0<>252671b58dd2f8b9f202157cdcf2f031<>res://.godot/imported/paaymaay_regular.ttf-ab7cd6ce4734ec1142b52eca3f077579.fontdata::
